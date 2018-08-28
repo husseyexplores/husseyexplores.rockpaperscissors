@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Rock Paper Scissors</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col l8 offset-l2 m12 center-align">
+        <div class="input-field inline total-rounds">
+          <input id="points-to-win" type="number" class="validate" min="1" max="10" value="5">
+          <label for="total-rounds">Points to Win</label>
+          <span class="helper-text" data-error="Please enter the number of rounds between 1 and 10" data-success="Total Number of Rounds are correct"></span>
+        </div>
+
+        <hr>
+
+        <div class="round-controls-wrapper">
+          <h5 class="center-align">Your Pick: </h5>
+          <div class="user-options">
+            <label class="user-options__option">
+              <input class="with-gap" name="user-choice" type="radio" value="0">
+              <span>Rock</span>
+            </label>
+
+            <label class="user-options__option">
+              <input class="with-gap" name="user-choice" type="radio" value="1">
+              <span>Paper</span>
+            </label>
+
+            <label class="user-options__option">
+              <input class="with-gap" name="user-choice" type="radio" value="2">
+              <span>Scissors</span>
+            </label>
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row round-stats">
+          <div class="col s4">
+            <p>
+              <span>You Played:</span>
+              <span id="you-played">Rock</span>
+            </p>
+          </div>
+
+          <div class="col s4">
+            <p>
+              <span>Round Winner:</span>
+              <span id="round-winner">You</span>
+            </p>
+          </div>
+
+          <div class="col s4">
+            <p>
+              <span>CPU Played:</span>
+              <span id="cpu-played">Paper</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 results-wrapper">
+          <p>
+            <span class="descripcion">Your points</span>
+            <span class="precio" id="player-points-res">2</span>
+          </p>
+          <p>
+            <span class="descripcion">Computer points</span>
+            <span class="precio" id="cpu-points-res">1</span>
+          </p>
+        </div>
+        <p class="winner">
+          <span>Winner:</span>
+          <span id="winner">Computer</span>
+        </p>
+        <div class="restart-game">
+          <button id="restart-game" class="btn waves-effect grey darken-1" type="submit" name="action">Restart Game
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

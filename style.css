@@ -1,0 +1,189 @@
+:root {
+  --color-primary: #f1f1f1;
+  --color-green: #00c00a;
+}
+
+body {
+  font-family: monospace;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background: #212121;
+  border-radius: 3px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * =======================
+ * Input Number  
+ * =======================
+ */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  color: inherit;
+}
+
+input.valid[type=number]:not(.browser-default),
+input.valid[type=number]:not(.browser-default):focus,
+input[type=number]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid var(--color-primary);
+  box-shadow: none;
+}
+
+input[type=number]:not(.browser-default):focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #eeeeee;
+}
+
+input[type=number]:not(.browser-default):focus:not([readonly])+label {
+  color: var(--color-primary);
+}
+
+input[type=number]:not(.browser-default).valid~.helper-text[data-success] {
+  color: var(--color-green);
+}
+
+/*
+ * =======================
+ * Input Radio 
+ * =======================
+ */
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+  border: 2px solid var(--color-green);
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+  background-color: var(--color-green);
+}
+
+input[type=radio]:checked+span {
+  color: var(--color-green);
+}
+
+/*
+ * =======================
+ * Play Button 
+ * =======================
+ */
+
+.btn {
+  color: inherit;
+}
+
+/*
+ * =======================
+ * Controls and Results
+ * =======================
+ */
+
+.round-controls-wrapper,
+.round-stats {
+  margin: 50px auto;
+}
+
+.results-wrapper {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.user-options__option,
+.user-options__option span {
+  color: inherit;
+}
+
+.play-wrapper {
+  flex: 0 0 100%;
+  margin-top: 30px;
+}
+
+.total-rounds {
+  min-width: 100px;
+  max-width: 300px;
+  width: 100%
+}
+
+.round-stats .col p {
+  display: flex;
+  flex-direction: column;
+}
+
+#round-winner {
+  text-transform: capitalize;
+}
+
+.winner {
+  font-size: 20px;
+  color: var(--color-green);
+  font-weight: bold;
+  transition: all .2s ease-in;
+  opacity: 0;
+}
+
+/*
+ * =======================
+ * Filling Dots
+ * =======================
+ */
+
+.descripcion {
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 300px;
+}
+
+.descripcion::after {
+  content: " ..................................................................................";
+}
+
+.precio {
+  float: left;
+  width: 20px;
+  overflow: hidden
+}
+
+/*
+ * =======================
+ * Media Query - Max-Width: 470px
+ * =======================
+ */
+
+@media (max-width: 470px) {
+  .user-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .play-wrapper {
+    align-self: center;
+  }
+}
