@@ -154,10 +154,10 @@ const appController = (function(scrCtrl, UICtrl) {
       return 'It\'s a tie!'; // It's a tie
     } else if (plyrChoice === "Paper" && cmpChoice === "Rock") {
       tieCount = 0;
-      return players[1];
+      return players[0];
     } else if (plyrChoice === "Scissors" && cmpChoice === "Rock") {
       tieCount = 0;
-      return players[0];
+      return players[1];
     } else if (plyrChoice === "Rock" && cmpChoice === "Scissors") {
       tieCount = 0;
       return players[0];
